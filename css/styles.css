@@ -1,0 +1,507 @@
+/* Reset CSS para garantir consistência entre navegadores */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif; /* Escolha a fonte que preferir */
+}
+
+/* Estilo da Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(to right, #c088ed, #4417a6);
+  border-radius: 0 0 20px 20px; /* Cantos inferiores arredondados para maior visibilidade */
+  z-index: 1000; /* Garante que a navbar fique acima de outros elementos */
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #dddddd; /* Muda a cor ao passar o mouse */
+}
+
+/* Estilo do Logo */
+.navbar .logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* Estilo do Hamburger Menu */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-around; /* Distribui o espaço de maneira uniforme */
+  padding: 4rem 10%; /* Aumenta o padding para adicionar uma 'margem' em ambos os lados */
+  background: #fdf6fe;
+  color: #4417a6; /* Cor do tema da sua marca */
+  position: relative; /* Para posicionamento absoluto dos elementos filhos */
+  height: 100vh; /* Preenche toda a tela de visualização */
+  overflow: hidden; /* Oculta qualquer conteúdo que exceda os limites da caixa */
+}
+
+.intro::after {
+  content: "";
+  position: absolute;
+  bottom: -50px; /* Posição no fundo da seção intro */
+  left: 0;
+  width: 100%;
+  height: 150px; /* Altura do efeito de ondas */
+  background: radial-gradient(
+    circle at bottom center,
+    transparent 30%
+  ); /* Gradiente radial para o efeito de ondas */
+  z-index: -1; /* Coloca o efeito de ondas atrás do conteúdo */
+}
+
+.intro-text {
+  max-width: 500px; /* Define uma largura máxima para o texto */
+  margin-right: auto; /* Empurra para a esquerda */
+  /* ... outros estilos ... */
+}
+
+.intro-text h1 {
+  font-size: 3.5rem; /* Tamanho grande para destaque */
+  font-weight: 900; /* Extra negrito */
+  color: #4417a6; /* Cor branca, ou outra que você preferir */
+  text-transform: uppercase; /* Todas as letras maiúsculas */
+  line-height: 1.1; /* Espaçamento entre as linhas */
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra leve para destacar no fundo */
+}
+
+.intro-text h2 {
+  font-weight: 700; /* Negrito */
+  color: #c088ed;
+  margin-bottom: 2rem;
+  /* Se houver mais estilos específicos, você pode adicionar aqui */
+}
+
+.intro-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    background-color: #C088ED; /* Cor de fundo do botão */
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-icon {
+    margin-right: 10px; /* Espaço entre o ícone e o texto */
+    width: 24px; /* Tamanho do ícone */
+    height: auto;
+}
+
+
+.intro-btn:hover {
+  background-color: #4417a6; /* Cor de gradiente escuro para hover */
+}
+
+.intro-image {
+  margin-left: auto; /* Empurra para a direita */
+  position: relative; /* Estabelece um contexto de posicionamento */
+  max-width: 500px;
+}
+
+.intro-text,
+.intro-image {
+  max-width: 500px; /* Define uma largura máxima para o texto e imagem */
+  margin: auto; /* Centraliza o texto e a imagem dentro da sua largura máxima */
+}
+
+.intro-image .student-img {
+  width: 100%;
+  max-width: 500px; /* Ajuste o tamanho conforme necessário */
+  position: relative; /* Garanta que a imagem da pessoa esteja por cima do fundo */
+  z-index: 1; /* Menor do que o z-index do menu ativo */
+}
+
+.intro-image .background-dec {
+  position: absolute;
+  top: 0;
+  left: 50%; /* ou ajuste conforme necessário para alinhar como no design */
+  transform: translateX(-50%); /* ajusta o posicionamento horizontal */
+  z-index: 0; /* Por trás da imagem da pessoa */
+  width: 100%;
+  max-width: 600px; /* Ajuste o tamanho conforme necessário */
+}
+
+.navbar.active + .intro .intro-image .student-img,
+.navbar.active + .intro .intro-image .background-dec {
+  z-index: -1; /* Isso coloca as imagens atrás do menu quando ativo */
+}
+
+/* Estilos da Seção de Serviços */
+
+.services-section {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 10%;
+  /* background: linear-gradient(to bottom, #ffffff 0%, #ffffff 80%, #C088ED 100%); */
+  color: #fff;
+  background: none;
+  min-height: 100vh; /* Garante que a seção seja no mínimo do tamanho da tela */
+}
+
+.services-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; /* Coloca a imagem de fundo atrás do conteúdo da seção */
+}
+.services-background .background-img {
+  width: 100%; /* Ajusta a largura da imagem para cobrir o elemento */
+  height: auto; /* Mantém a proporção da imagem */
+  object-fit: cover; /* Garante que a imagem cubra toda a área disponível sem distorções */
+}
+
+.background-img {
+  position: absolute;
+  bottom: 0; /* Ajuste conforme a necessidade para alinhar a imagem */
+  left: 0; /* Ajuste conforme a necessidade para alinhar a imagem */
+  width: auto; /* Mantém a proporção original da imagem */
+  max-height: 100%; /* Limita a altura da imagem para se ajustar à seção */
+  z-index: -2; /* Garante que a imagem fique atrás de todos os conteúdos */
+}
+
+.services-menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.services-title {
+  text-align: center; /* Alinha o texto ao centro */
+  margin-bottom: 20px; /* Espaçamento inferior para separar dos botões */
+  color: #4417a6; /* Cor do tema da sua marca */
+  font-size: 2.5rem; /* Tamanho da fonte */
+  font-weight: 900; /* Texto em negrito */
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.service-btn {
+  padding: 10px 15px;
+  border: 2px solid #c088ed; /* Alterando a cor da borda para contraste com o fundo */
+  background-color: transparent; /* Fundo transparente para começar */
+  color: #4417a6;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0; /* Remover margem para usar o gap do flexbox */
+}
+
+.service-btn:hover,
+.service-btn.active {
+  background-color: #fff;
+  color: #c088ed;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.services-content {
+  width: 100%;
+  max-width: 800px; /* Ajustar conforme o necessário */
+  height: calc(100% - 50px); /* Subtrai a altura do título da altura total */
+  overflow-y: auto; /* Adiciona rolagem se o conteúdo exceder a altura */
+}
+
+.services-content .service-content {
+  display: none; /* Esconde todos os conteúdos inicialmente */
+}
+
+.services-content .service-content.active {
+  display: block; /* Apenas o conteúdo ativo é exibido */
+}
+
+.subtopics-list {
+  list-style: none; /* Remove o estilo de lista padrão */
+  padding: 0;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.subtopics-list li {
+  background: #ffd700; /* Cor de fundo amarelo */
+  color: #4417a6;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.custom-checkbox {
+  display: inline-block;
+  color: #4417a6; /* Cor da caixa de seleção */
+  margin-right: 10px; /* Espaçamento entre a caixa de seleção e o texto */
+  font-size: 1.2em; /* Tamanho do símbolo de verificação */
+}
+.about-section {
+  background: #f8f8f8; /* Ou qualquer cor que combine com o seu design */
+  padding: 4rem 0; /* Espaço na parte superior e inferior da seção */
+  position: relative;
+  text-align: center;
+  overflow: hidden; /* Mantém tudo dentro da seção */
+}
+
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 1200px; /* Limita a largura da seção */
+  margin: auto;
+}
+
+.about-image-left,
+.about-image-right {
+  flex: 1; /* Distribui o espaço igualmente */
+  max-width: 200px; /* Limita o tamanho das imagens decorativas */
+}
+
+.decorative-img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%; /* Torna as imagens circulares */
+  border: 4px solid #c088ed; /* Adiciona uma borda colorida */
+}
+
+.team-card {
+  position: relative;
+  max-width: 300px;
+  text-align: center;
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+.card-quote {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px; /* ou o tamanho que você deseja para sua imagem */
+  height: auto;
+  z-index: 2; /* Certifique-se de que está acima dos outros elementos do cartão */
+}
+
+.card-quote img {
+  width: 100%;
+  height: auto;
+}
+
+.card-image {
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* Mantém a proporção de 1:1 */
+  border-radius: 50%;
+  overflow: hidden;
+  background: #ffd700; /* Cor de fundo temporária */
+  margin-bottom: 1rem;
+}
+.social-icons {
+  margin-bottom: 1rem; /* Espaço abaixo dos ícones de redes sociais */
+  display: flex;
+  justify-content: center; /* Centraliza os ícones de redes sociais */
+  gap: 0.5rem; /* Espaço entre os ícones */
+}
+
+.social-icons a {
+  display: inline-block;
+  width: 24px; /* Tamanho dos ícones */
+  height: 24px; /* Tamanho dos ícones */
+  transition: transform 0.3s ease, color 0.3s ease; /* Suaviza a transição do efeito */
+}
+
+.social-icons img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease; /* Suaviza a transição do efeito de escala */
+}
+
+.social-icons a:hover img {
+  transform: scale(1.1); /* Aumenta o tamanho do ícone em 10% */
+}
+
+.social-icons a.facebook-icon:hover {
+  background-color: #3b5998; /* Cor do Facebook */
+  border-radius: 50%; /* Adiciona bordas arredondadas */
+}
+
+.social-icons a.instagram-icon:hover {
+  background-color: #e1306c; /* Cor do Instagram */
+  border-radius: 50%;
+}
+
+.social-icons a.linkedin-icon:hover {
+  background-color: #0077b5; /* Cor do LinkedIn */
+  border-radius: 50%;
+}
+.card-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.card-info {
+  position: relative;
+  background: #c088ed; /* Cor de fundo do texto */
+  color: white;
+  padding: 1rem;
+  border-radius: 20px;
+}
+
+.social-handle {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #feb2b2; /* Cor de fundo dos ícones das redes sociais */
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+.social-handle a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.member-name {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.member-role {
+  font-size: 0.9rem;
+}
+
+/* Estilos para responsividade e ajuste fino podem ser adicionados abaixo */
+
+/* ... estilos anteriores ... */
+
+@media (max-width: 768px) {
+  .navbar {
+    position: relative; /* Isso permanece inalterado */
+    z-index: 10; /* Garante que a navbar fique por cima do conteúdo quando o menu estiver ativo */
+    height: 60px; /* Definir uma altura fixa para a barra de navegação */
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 50%; /* Começa a partir do meio da altura da navbar */
+    right: 1rem;
+    transform: translateY(
+      -50%
+    ); /* Desloca o ícone para cima pela metade de sua própria altura */
+    z-index: 3; /* Garante que o ícone fique acima do menu expandido */
+  }
+
+  .navbar nav {
+    display: none;
+    position: fixed;
+    top: 56px; /* Isso deve ser igual à altura da sua navbar */
+    left: 0;
+    height: calc(
+      100vh - 56px
+    ); /* Subtrai a altura da navbar do tamanho total da tela */
+    width: 100%;
+    background-color: #cda2f0; /* Fundo agora transparente */
+    flex-direction: column;
+    justify-content: flex-start; /* Alinhamento vertical do início */
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%);
+    z-index: 11; /* Garante que o menu fique por cima de todos os outros conteúdos */
+    overflow-y: auto; /* Adiciona rolagem se o conteúdo exceder a altura da tela */
+  }
+
+  .navbar nav a {
+    display: block;
+    margin: 10px 0;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #4417a6; /* Linha abaixo de cada menu */
+    padding-bottom: 0.5rem; /* Espaço abaixo do texto antes da linha */
+  }
+
+  .navbar #navbarNav.active {
+    display: flex; /* Vai mostrar a nav se tem a classe .active */
+    transform: translateX(0);
+  }
+  .navbar nav a:last-child {
+    border-bottom: none;
+  }
+  .intro {
+    flex-direction: column;
+    padding: 4rem 5%; /* Reduz o padding lateral para dispositivos móveis */
+  }
+
+  .intro-text,
+  .intro-image {
+    max-width: 100%; /* Permite que o texto e a imagem usem toda a largura disponível */
+    margin: auto; /* Centraliza o texto e a imagem */
+  }
+  .intro-image .background-dec {
+    display: none; /* Opcionalmente esconde o fundo decorativo em telas menores */
+  }
+  .services-menu {
+    flex-direction: column;
+  }
+  .about-wrapper {
+    flex-direction: column;
+  }
+
+  .about-image-left,
+  .about-image-right {
+    max-width: 150px; /* Reduz o tamanho das imagens em telas menores */
+    margin-bottom: 1rem; /* Espaçamento entre as imagens e o conteúdo */
+  }
+
+  .about-content {
+    padding: 0; /* Remove o espaçamento lateral para telas menores */
+  }
+}
+
+/* ... estilos subsequentes ... */
