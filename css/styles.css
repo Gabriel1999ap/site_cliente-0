@@ -101,24 +101,23 @@ body {
 }
 
 .intro-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem 2rem;
-    background-color: #C088ED; /* Cor de fundo do botão */
-    color: white;
-    text-decoration: none;
-    border-radius: 20px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  background-color: #c088ed; /* Cor de fundo do botão */
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .whatsapp-icon {
-    margin-right: 10px; /* Espaço entre o ícone e o texto */
-    width: 24px; /* Tamanho do ícone */
-    height: auto;
+  margin-right: 10px; /* Espaço entre o ícone e o texto */
+  width: 24px; /* Tamanho do ícone */
+  height: auto;
 }
-
 
 .intro-btn:hover {
   background-color: #4417a6; /* Cor de gradiente escuro para hover */
@@ -257,18 +256,33 @@ body {
   padding: 0;
   margin: 20px 0;
   width: 100%;
+  column-count: 2; /* Divide os itens da lista em 2 colunas */
+  column-gap: 20px; /* Define um espaço entre as colunas */
 }
 
 .subtopics-list li {
-  background: #ffd700; /* Cor de fundo amarelo */
+  background: #ffd700;
   color: #4417a6;
   padding: 10px;
   border-radius: 10px;
-  display: flex;
-  align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   font-weight: bold;
   margin-bottom: 10px;
+}
+
+.tooltip {
+  position: absolute;
+  max-width: 310px; /* Define uma largura máxima */
+
+  background-color: #4417a6;
+  color: white;
+  border-radius: 5px;
+  padding: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  visibility: hidden; /* Escondido por padrão */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1000; /* Garante que fique acima de outros elementos */
 }
 
 .custom-checkbox {
