@@ -1,346 +1,302 @@
 <!DOCTYPE html>
 <html lang="pt">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Landing Page</title>
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body>
-    <div class="navbar">
-      <div class="logo">Comunica</div>
-      <button class="hamburger" id="hamburger">&#9776;</button>
-      <nav id="navbarNav">
-        <a href="#" class="active">Home</a>
-        <a href="#services-section">Serviços</a>
-        <a href="#about">Nosso Time</a>
-        <a href="#">Testimonials</a>
-        <a href="#">Contact Us</a>
-      </nav>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="logo">
+      <a href="#">
+        <img src="img/simbolo2.png" alt="Comunica Logo" class="navbar-logo" />
+      </a>
     </div>
-    <section class="intro">
-      <div class="intro-text">
-        <h1>COMUNICA</h1>
-        <h2>
-          Você é um candidato apaixonado pela sua comunidade, mas enfrenta
-          desafios em alcançar e conectar-se com seus eleitores de maneira
-          eficaz? Não se preocupe, estamos aqui para ajudar!
-        </h2>
-        <a href="https://wa.me/seunumerodetelefone" class="intro-btn">
-          <img src="img/whatsapp.png" alt="WhatsApp" class="whatsapp-icon" />
-          FALE CONOSCO
-        </a>
-      </div>
-      <div class="intro-image">
-        <img
-          src="img/banner-right-image.png"
-          alt="Graphic Design Student"
-          class="student-img"
-        />
-        <img src="img/banner-right-dec.png" alt="" class="background-dec" />
-      </div>
-    </section>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+    <nav id="navbarNav">
+      <a href="#" class="active">Home</a>
+      <a href="#services">Serviços</a>
+      <a href="#time">Nosso Time</a>
+      <a href="#">Testimonials</a>
+      <a href="#">Contact Us</a>
+    </nav>
+  </div>
+  <section class="intro">
+    <div class="intro-text">
+      <h1>
+        <img src="img/logo_comunica1.png" alt="Comunica Logo" class="intro-logo" />
+      </h1>
+      <h2>
+        Você é um candidato apaixonado pela sua comunidade, mas enfrenta
+        desafios em alcançar e conectar-se com seus eleitores de maneira
+        eficaz? Não se preocupe, estamos aqui para ajudar!
+      </h2>
+      <a href="https://wa.me/seunumerodetelefone" class="intro-btn">
+        <img src="img/whatsapp.png" alt="WhatsApp" class="whatsapp-icon" />
+        FALE CONOSCO
+      </a>
+    </div>
+    <div class="intro-image">
+      <img src="img/intro.png" alt="Graphic Design Student" class="student-img" />
+      <img src="img/banner-right-dec.png" alt="" class="background-dec" />
+    </div>
+  </section>
 
-    <section class="services-section" id="services-section">
-      <div class="services-background">
-        <!-- A imagem agora é posicionada absolutamente dentro de services-background -->
-        <img
-          src="img/testimonials-right-dec.png"
-          alt="Background"
-          class="background-img"
-        />
-      </div>
-      <h2 class="services-title">Nossos Serviços</h2>
 
-      <div class="services-menu">
-        <button class="service-btn active" data-service="web-dev">
-          Assessoria em Marketing Digital
-        </button>
-        <button class="service-btn" data-service="graphic-design">
-          Planejamento Estratégico de Posts
-        </button>
-        <button class="service-btn" data-service="web-design">
-          Consultoria Estratégica de Marketing
-        </button>
-      </div>
-      <div class="services-content">
-        <div class="service-content active" id="web-dev">
-          <ul class="subtopics-list">
-            <li
-              data-description="Desenvolvimento detalhado de personas representativas do
+  <section class="services-section" id="services">
+    <div class="services-background">
+      <!-- A imagem agora é posicionada absolutamente dentro de services-background -->
+      <img src="img/testimonials-right-dec.png" alt="Background" class="background-img" />
+    </div>
+    <h2 class="services-title service-animate">Nossos Serviços</h2>
+
+    <div class="services-menu">
+      <button class="service-btn active" data-service="web-dev">
+        Assessoria em Marketing Digital
+      </button>
+      <button class="service-btn" data-service="graphic-design">
+        Planejamento Estratégico de Posts
+      </button>
+      <button class="service-btn" data-service="web-design">
+        Consultoria Estratégica de Marketing
+      </button>
+    </div>
+    <div class="services-content service-animate">
+      <div class="service-content active" id="web-dev">
+        <ul class="subtopics-list">
+          <li data-description="Desenvolvimento detalhado de personas representativas do
             eleitorado-alvo, com base em dados demográficos, comportamentais
-            e de preferências."
-            >
-              <span class="custom-checkbox">✔</span>
-              Construção de Personas
-            </li>
-            <li
-              data-description="Análise profunda das necessidades, desejos, dores e aspirações dos possíveis eleitores para adaptar a mensagem e as estratégias de comunicação."
-            >
-              <span class="custom-checkbox">✔</span>
-              Mapa de Empatia dos Possíveis Eleitores
-            </li>
+            e de preferências.">
+            <span class="custom-checkbox">✔</span>
+            Construção de Personas
+          </li>
+          <li
+            data-description="Análise profunda das necessidades, desejos, dores e aspirações dos possíveis eleitores para adaptar a mensagem e as estratégias de comunicação.">
+            <span class="custom-checkbox">✔</span>
+            Mapa de Empatia dos Possíveis Eleitores
+          </li>
 
-            <li
-              data-description=": Identificação do arquétipo de marca mais adequado para a campanha, garantindo consistência e conexão emocional com o público-alvo."
-            >
-              <span class="custom-checkbox">✔</span>
-              Arquétipo
-            </li>
+          <li
+            data-description=": Identificação do arquétipo de marca mais adequado para a campanha, garantindo consistência e conexão emocional com o público-alvo.">
+            <span class="custom-checkbox">✔</span>
+            Arquétipo
+          </li>
 
-            <li
-              data-description="Avaliação minuciosa dos concorrentes diretos, suas estratégias, pontos fortes e fracos, para posicionar a campanha de forma diferenciada e competitiva."
-            >
-              <span class="custom-checkbox">✔</span>
-              Análise de Concorrência
-            </li>
+          <li
+            data-description="Avaliação minuciosa dos concorrentes diretos, suas estratégias, pontos fortes e fracos, para posicionar a campanha de forma diferenciada e competitiva.">
+            <span class="custom-checkbox">✔</span>
+            Análise de Concorrência
+          </li>
 
-            <li
-              data-description="Desenvolvimento e fortalecimento da identidade da marca do candidato, incluindo elementos visuais, tom de voz e mensagem central, para criar uma imagem sólida e reconhecível."
-            >
-              <span class="custom-checkbox">✔</span>
-              Branding
-            </li>
+          <li
+            data-description="Desenvolvimento e fortalecimento da identidade da marca do candidato, incluindo elementos visuais, tom de voz e mensagem central, para criar uma imagem sólida e reconhecível.">
+            <span class="custom-checkbox">✔</span>
+            Branding
+          </li>
 
-            <li
-              data-description="Identificação das principais forças, fraquezas, oportunidades e ameaças relacionadas à sua presença digital e estratégia de campanha."
-            >
-              <span class="custom-checkbox">✔</span>
-              Análise SWOT
-            </li>
+          <li
+            data-description="Identificação das principais forças, fraquezas, oportunidades e ameaças relacionadas à sua presença digital e estratégia de campanha.">
+            <span class="custom-checkbox">✔</span>
+            Análise SWOT
+          </li>
 
-            <li
-              data-description="Desenvolvimento de estratégias personalizadas para uma presença eficaz online."
-            >
-              <span class="custom-checkbox">✔</span>
-              Planejamento Estratégico da Campanha
-            </li>
+          <li data-description="Desenvolvimento de estratégias personalizadas para uma presença eficaz online.">
+            <span class="custom-checkbox">✔</span>
+            Planejamento Estratégico da Campanha
+          </li>
 
-            <li
-              data-description="Captura de imagens profissionais para uso em plataformas digitais."
-            >
-              <span class="custom-checkbox">✔</span>
-              Ensaio Fotográfico
-            </li>
+          <li data-description="Captura de imagens profissionais para uso em plataformas digitais.">
+            <span class="custom-checkbox">✔</span>
+            Ensaio Fotográfico
+          </li>
 
-            <li
-              data-description="Criação de uma identidade visual forte e coesa para a presença digital."
-            >
-              <span class="custom-checkbox">✔</span>
-              Identidade Visual
-            </li>
+          <li data-description="Criação de uma identidade visual forte e coesa para a presença digital.">
+            <span class="custom-checkbox">✔</span>
+            Identidade Visual
+          </li>
 
-            <li
-              data-description="Desenvolvimento de materiais digitais impactantes e informativos."
-            >
-              <span class="custom-checkbox">✔</span>
-              Material Institucional da Campanha
-            </li>
+          <li data-description="Desenvolvimento de materiais digitais impactantes e informativos.">
+            <span class="custom-checkbox">✔</span>
+            Material Institucional da Campanha
+          </li>
 
-            <li
-              data-description="Apresentação digital clara e atrativa de suas propostas."
-            >
-              <span class="custom-checkbox">✔</span>
-              Diagramação do Plano de Governo
-            </li>
+          <li data-description="Apresentação digital clara e atrativa de suas propostas.">
+            <span class="custom-checkbox">✔</span>
+            Diagramação do Plano de Governo
+          </li>
 
-            <li
-              data-description="Estratégias digitais para manter seu público engajado."
-            >
-              <span class="custom-checkbox">✔</span>
-              Planejamento dos Posts (cards, vídeos, stories)
-            </li>
+          <li data-description="Estratégias digitais para manter seu público engajado.">
+            <span class="custom-checkbox">✔</span>
+            Planejamento dos Posts (cards, vídeos, stories)
+          </li>
 
-            <li
-              data-description="Desenvolvimento de legendas persuasivas e eficazes para o ambiente digital."
-            >
-              <span class="custom-checkbox">✔</span>
-              Programação de Legendas
-            </li>
-            <li
-              data-description="Gerenciamento proativo das redes sociais e análise de resultados online."
-            >
-              <span class="custom-checkbox">✔</span>
-              Postagens e Monitoramento
-            </li>
+          <li data-description="Desenvolvimento de legendas persuasivas e eficazes para o ambiente digital.">
+            <span class="custom-checkbox">✔</span>
+            Programação de Legendas
+          </li>
+          <li data-description="Gerenciamento proativo das redes sociais e análise de resultados online.">
+            <span class="custom-checkbox">✔</span>
+            Postagens e Monitoramento
+          </li>
 
-            <!-- Repita para outros itens, ajustando o valor de data-description conforme necessário -->
-          </ul>
+          <!-- Repita para outros itens, ajustando o valor de data-description conforme necessário -->
+        </ul>
+      </div>
+      <div class="service-content" id="graphic-design">
+        <ul class="subtopics-list">
+          <li
+            data-description="Desenvolvimento detalhado de personas representativas do eleitorado-alvo, com base em dados demográficos, comportamentais e de preferências.">
+            <span class="custom-checkbox">✔</span>
+            Construção de Personas
+          </li>
+
+          <li
+            data-description="Análise profunda das necessidades, desejos, dores e aspirações dos possíveis eleitores para adaptar a mensagem e as estratégias de comunicação.">
+            <span class="custom-checkbox">✔</span>
+            Mapa de Empatia dos Possíveis Eleitores
+          </li>
+          <li
+            data-description="Identificação do arquétipo de marca mais adequado para a campanha, garantindo consistência e conexão emocional com o público-alvo.">
+            <span class="custom-checkbox">✔</span>
+            Arquétipo
+          </li>
+          <li
+            data-description="Identificação das principais forças, fraquezas, oportunidades e ameaças relacionadas à sua presença digital e estratégia de campanha.">
+            <span class="custom-checkbox">✔</span>
+            Análise de Concorrência
+          </li>
+          <li data-description="Cronograma detalhado para uma presença consistente e eficaz nas redes sociais.">
+            <span class="custom-checkbox">✔</span>
+            Planejamento de Posts
+          </li>
+          <li data-description="Desenvolvimento de conteúdo digital relevante e atrativo para sua audiência online.">
+            <span class="custom-checkbox">✔</span>
+            Planejamento Estratégico com Conteúdo
+          </li>
+        </ul>
+      </div>
+      <div class="service-content" id="web-design">
+        <ul class="subtopics-list">
+          <li data-description="Sessões personalizadas para entender suas necessidades digitais e objetivos online.">
+            <span class="custom-checkbox">✔</span>
+            2 Reuniões e Discussão de Pautas
+          </li>
+
+          <li
+            data-description="Desenvolvimento detalhado de personas representativas do eleitorado-alvo, com base em dados demográficos, comportamentais e de preferências.">
+            <span class="custom-checkbox">✔</span>
+            Construção de Personas
+          </li>
+          <li
+            data-description="Identificação do arquétipo de marca mais adequado para a campanha, garantindo consistência e conexão emocional com o público-alvo.">
+            <span class="custom-checkbox">✔</span>
+            Arquétipo
+          </li>
+          <li
+            data-description="Avaliação minuciosa dos concorrentes diretos, suas estratégias, pontos fortes e fracos, para posicionar a campanha de forma diferenciada e competitiva.">
+            <span class="custom-checkbox">✔</span>
+            Análise de Concorrência
+          </li>
+          <li
+            data-description="Identificação das principais forças, fraquezas, oportunidades e ameaças relacionadas à sua presença digital e estratégia de campanha.">
+            <span class="custom-checkbox">✔</span>
+            Análise SWOT
+          </li>
+          <li data-description="Avaliação detalhada do seu perfil online e do cenário político digital local.">
+            <span class="custom-checkbox">✔</span>
+            Análise do Perfil Digital
+          </li>
+          <li data-description="Identificação dos canais mais eficazes para alcançar seu público-alvo na internet.">
+            <span class="custom-checkbox">✔</span>
+            Identificação dos Meios de Comunicação Digital
+          </li>
+          <li
+            data-description="Assessoria especializada para garantir que suas ações de marketing digital estejam alinhadas com seus objetivos políticos.">
+            <span class="custom-checkbox">✔</span>
+            Orientação de Planejamento Estratégico Digital
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="about-section" id="time">
+    <h2 class="services-title">Nosso Time</h2>
+    <em>
+      <p>
+        Na <b>Comunica</b>, acreditamos que o sucesso é alcançado através da
+        colaboração e do comprometimento de uma equipe talentosa e
+        diversificada. Conheça um pouco mais sobre os membros que compõem o
+        nosso time.
+      </p>
+    </em>
+
+    <div class="about-wrapper">
+      <div class="team-card">
+        <div class="card-quote">
+          <img src="img/quote.png" alt="Quote" />
         </div>
-        <div class="service-content" id="graphic-design">
-          <ul class="subtopics-list">
-            <li
-              data-description="Desenvolvimento detalhado de personas representativas do eleitorado-alvo, com base em dados demográficos, comportamentais e de preferências."
-            >
-              <span class="custom-checkbox">✔</span>
-              Construção de Personas
-            </li>
-
-            <li
-              data-description="Análise profunda das necessidades, desejos, dores e aspirações dos possíveis eleitores para adaptar a mensagem e as estratégias de comunicação."
-            >
-              <span class="custom-checkbox">✔</span>
-              Mapa de Empatia dos Possíveis Eleitores
-            </li>
-            <li
-              data-description="Identificação do arquétipo de marca mais adequado para a campanha, garantindo consistência e conexão emocional com o público-alvo."
-            >
-              <span class="custom-checkbox">✔</span>
-              Arquétipo
-            </li>
-            <li
-              data-description="Identificação das principais forças, fraquezas, oportunidades e ameaças relacionadas à sua presença digital e estratégia de campanha."
-            >
-              <span class="custom-checkbox">✔</span>
-              Análise de Concorrência
-            </li>
-            <li
-              data-description="Cronograma detalhado para uma presença consistente e eficaz nas redes sociais."
-            >
-              <span class="custom-checkbox">✔</span>
-              Planejamento de Posts
-            </li>
-            <li
-              data-description="Desenvolvimento de conteúdo digital relevante e atrativo para sua audiência online."
-            >
-              <span class="custom-checkbox">✔</span>
-              Planejamento Estratégico com Conteúdo
-            </li>
-          </ul>
+        <div class="card-image">
+          <img src="img/Iara.png" alt="Iara Meneses" />
         </div>
-        <div class="service-content" id="web-design">
-          <ul class="subtopics-list">
-            <li
-              data-description="Sessões personalizadas para entender suas necessidades digitais e objetivos online."
-            >
-              <span class="custom-checkbox">✔</span>
-              2 Reuniões e Discussão de Pautas
-            </li>
-
-            <li
-              data-description="Desenvolvimento detalhado de personas representativas do eleitorado-alvo, com base em dados demográficos, comportamentais e de preferências."
-            >
-              <span class="custom-checkbox">✔</span>
-              Construção de Personas
-            </li>
-            <li
-              data-description="Identificação do arquétipo de marca mais adequado para a campanha, garantindo consistência e conexão emocional com o público-alvo."
-            >
-              <span class="custom-checkbox">✔</span>
-              Arquétipo
-            </li>
-            <li
-              data-description="Avaliação minuciosa dos concorrentes diretos, suas estratégias, pontos fortes e fracos, para posicionar a campanha de forma diferenciada e competitiva."
-            >
-              <span class="custom-checkbox">✔</span>
-              Análise de Concorrência
-            </li>
-            <li
-              data-description="Identificação das principais forças, fraquezas, oportunidades e ameaças relacionadas à sua presença digital e estratégia de campanha."
-            >
-              <span class="custom-checkbox">✔</span>
-              Análise SWOT
-            </li>
-            <li
-              data-description="Avaliação detalhada do seu perfil online e do cenário político digital local."
-            >
-              <span class="custom-checkbox">✔</span>
-              Análise do Perfil Digital
-            </li>
-            <li
-              data-description="Identificação dos canais mais eficazes para alcançar seu público-alvo na internet."
-            >
-              <span class="custom-checkbox">✔</span>
-              Identificação dos Meios de Comunicação Digital
-            </li>
-            <li
-              data-description="Assessoria especializada para garantir que suas ações de marketing digital estejam alinhadas com seus objetivos políticos."
-            >
-              <span class="custom-checkbox">✔</span>
-              Orientação de Planejamento Estratégico Digital
-            </li>
-          </ul>
+        <div class="card-info">
+          <div class="social-icons">
+            <a href="https://facebook.com/username" class="facebook-icon" target="_blank" aria-label="Facebook">
+              <img src="img/facebook-icon.png" alt="Facebook" />
+            </a>
+            <a href="https://instagram.com/eleja.se" class="instagram-icon" target="_blank" aria-label="Instagram">
+              <img src="img/instagram-icon.png" alt="Instagram" />
+            </a>
+            <a href="https://linkedin.com/in/username" class="linkedin-icon" target="_blank" aria-label="LinkedIn">
+              <img src="img/linkedin-icon.png" alt="LinkedIn" />
+            </a>
+          </div>
+          <h3 class="member-name">Iara Meneses </h3>
+          <p class="member-role">
+            CEO da agência Comunica, Jornalista por formação, atua em Comunicação e Marketing como analista Estratégica
+            de Comunicação e marketing em diferentes nichos de atuação, já atuou em campanhas políticas de candidato a
+            Deputado Federal e de candidata ao conselho tutelar de Fortaleza/Ce.
+          </p>
         </div>
       </div>
-    </section>
-    <section class="about-section" id="about">
-      <h2 class="services-title">Nosso Time</h2>
-      <em>
-        <p>
-          Na <b>Comunica</b>, acreditamos que o sucesso é alcançado através da
-          colaboração e do comprometimento de uma equipe talentosa e
-          diversificada. Conheça um pouco mais sobre os membros que compõem o
-          nosso time.
-        </p>
-      </em>
-
-      <div class="about-wrapper">
-        <div class="team-card">
-          <div class="card-quote">
-            <img src="img/quote.png" alt="Quote" />
-          </div>
-          <div class="card-image">
-            <img src="img/team-member-01.jpg" alt="Emerson Saraiva" />
-          </div>
-          <div class="card-info">
-            <div class="social-icons">
-              <a
-                href="https://facebook.com/username"
-                class="facebook-icon"
-                target="_blank"
-                aria-label="Facebook"
-              >
-                <img src="img/facebook-icon.png" alt="Facebook" />
-              </a>
-              <a
-                href="https://instagram.com/eleja.se"
-                class="instagram-icon"
-                target="_blank"
-                aria-label="Instagram"
-              >
-                <img src="img/instagram-icon.png" alt="Instagram" />
-              </a>
-              <a
-                href="https://linkedin.com/in/username"
-                class="linkedin-icon"
-                target="_blank"
-                aria-label="LinkedIn"
-              >
-                <img src="img/linkedin-icon.png" alt="LinkedIn" />
-              </a>
-            </div>
-            <h3 class="member-name">Rayssa Leonel</h3>
-            <p class="member-role">
-              Jornalista com MBA em Marketing Estratégico Digital, com mais de
-              sete anos de experiência em comunicação e marketing. Dediquei mais
-              de três anos ao marketing político, destacando-me pela vitória em
-              uma campanha majoritária na terceira maior cidade do Ceará,
-              Juazeiro do Norte. Minha paixão é desenvolver estratégias que
-              inspirem, conquistem e mobilizem as pessoas.
-            </p>
-          </div>
+      <div class="team-card">
+        <div class="card-quote">
+          <img src="img/quote.png" alt="Quote" />
         </div>
-
-        <div class="team-card">
-          <div class="card-quote">
-            <img src="img/quote.png" alt="Quote" />
+        <div class="card-image">
+          <img src="img/Rayssa.jpeg" alt="Emerson Saraiva" />
+        </div>
+        <div class="card-info">
+          <div class="social-icons">
+            <a href="https://facebook.com/username" class="facebook-icon" target="_blank" aria-label="Facebook">
+              <img src="img/facebook-icon.png" alt="Facebook" />
+            </a>
+            <a href="https://instagram.com/eleja.se" class="instagram-icon" target="_blank" aria-label="Instagram">
+              <img src="img/instagram-icon.png" alt="Instagram" />
+            </a>
+            <a href="https://linkedin.com/in/username" class="linkedin-icon" target="_blank" aria-label="LinkedIn">
+              <img src="img/linkedin-icon.png" alt="LinkedIn" />
+            </a>
           </div>
-          <div class="card-image">
-            <img src="img/team-member-01.jpg" alt="Emerson Saraiva" />
-          </div>
-          <div class="card-info">
-            <div class="social-handle">
-              <a href="https://instagram.com/elesja.se">@eleja.se</a>
-            </div>
-            <h3 class="member-name">Emerson Saraiva</h3>
-            <p class="member-role">
-              Consultor Político, Publicitário, Jornalista e Criador do Eleja.se
-            </p>
-          </div>
+          <h3 class="member-name">Rayssa Leonel</h3>
+          <p class="member-role">
+            Jornalista com MBA em Marketing Estratégico Digital, com mais de
+            sete anos de experiência em comunicação e marketing. Dediquei mais
+            de três anos ao marketing político, destacando-me pela vitória em
+            uma campanha majoritária na terceira maior cidade do Ceará,
+            Juazeiro do Norte. Minha paixão é desenvolver estratégias que
+            inspirem, conquistem e mobilizem as pessoas.
+          </p>
         </div>
       </div>
-    </section>
 
-    <script src="js/script.js"></script>
-  </body>
+
+    </div>
+  </section>
+
+  <script src="js/script.js"></script>
+</body>
+
 </html>

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap');
+
 /* Reset CSS para garantir consistência entre navegadores */
 * {
   margin: 0;
@@ -6,7 +8,9 @@
 }
 
 body {
-  font-family: Arial, sans-serif; /* Escolha a fonte que preferir */
+  font-family: 'Mitr', sans-serif;
+  /* Define a fonte padrão para o corpo do documento */
+  /* Escolha a fonte que preferir */
 }
 
 /* Estilo da Navbar */
@@ -19,9 +23,20 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: linear-gradient(to right, #c088ed, #4417a6);
-  border-radius: 0 0 20px 20px; /* Cantos inferiores arredondados para maior visibilidade */
-  z-index: 1000; /* Garante que a navbar fique acima de outros elementos */
+  background: linear-gradient(to right, #dec9f7, #4417a6);
+  border-radius: 0 0 20px 20px;
+  z-index: 1000;
+  font-weight: 500;
+
+  /* Peso correspondente ao Light */
+
+}
+
+.navbar .logo img.navbar-logo {
+  height: 50px;
+  /* Ajuste a altura conforme necessário */
+  width: auto;
+  /* Mantém a proporção da imagem */
 }
 
 .navbar a {
@@ -32,7 +47,8 @@ body {
 }
 
 .navbar a:hover {
-  color: #dddddd; /* Muda a cor ao passar o mouse */
+  color: #dddddd;
+  /* Muda a cor ao passar o mouse */
 }
 
 /* Estilo do Logo */
@@ -54,112 +70,176 @@ body {
 .intro {
   display: flex;
   align-items: center;
-  justify-content: space-around; /* Distribui o espaço de maneira uniforme */
-  padding: 4rem 10%; /* Aumenta o padding para adicionar uma 'margem' em ambos os lados */
+  justify-content: space-around;
+  /* Distribui o espaço de maneira uniforme */
+  padding: 4rem 10%;
+  /* Aumenta o padding para adicionar uma 'margem' em ambos os lados */
   background: #fdf6fe;
-  color: #4417a6; /* Cor do tema da sua marca */
-  position: relative; /* Para posicionamento absoluto dos elementos filhos */
-  height: 100vh; /* Preenche toda a tela de visualização */
-  overflow: hidden; /* Oculta qualquer conteúdo que exceda os limites da caixa */
+  color: #4417a6;
+  /* Cor do tema da sua marca */
+  position: relative;
+  /* Para posicionamento absoluto dos elementos filhos */
+  height: 100vh;
+  /* Preenche toda a tela de visualização */
+  overflow: hidden;
+  /* Oculta qualquer conteúdo que exceda os limites da caixa */
 }
 
 .intro::after {
   content: "";
   position: absolute;
-  bottom: -50px; /* Posição no fundo da seção intro */
+  bottom: -50px;
+  /* Posição no fundo da seção intro */
   left: 0;
   width: 100%;
-  height: 150px; /* Altura do efeito de ondas */
-  background: radial-gradient(
-    circle at bottom center,
-    transparent 30%
-  ); /* Gradiente radial para o efeito de ondas */
-  z-index: -1; /* Coloca o efeito de ondas atrás do conteúdo */
+  height: 150px;
+  /* Altura do efeito de ondas */
+  background: radial-gradient(circle at bottom center,
+      transparent 30%);
+  /* Gradiente radial para o efeito de ondas */
+  z-index: -1;
+  /* Coloca o efeito de ondas atrás do conteúdo */
 }
 
 .intro-text {
-  max-width: 500px; /* Define uma largura máxima para o texto */
-  margin-right: auto; /* Empurra para a esquerda */
-  /* ... outros estilos ... */
+  animation: fadeIn 2s ease-out forwards;
+
+  text-align: center;
+  /* Centraliza o conteúdo horizontalmente */
+  display: flex;
+  flex-direction: column;
+  /* Organiza os filhos verticalmente */
+  justify-content: center;
+  /* Centraliza os filhos verticalmente no container */
+  align-items: center;
+  /* Centraliza os filhos horizontalmente no container */
+}
+
+.intro-logo {
+  width: 100%;
+  /* Ajuste a largura conforme necessário */
+  max-width: 100%;
+  /* Garante que a imagem não exceda a largura do container */
+  /* Define uma largura máxima */
+  height: auto;
+  /* Mantém a proporção da imagem */
+  display: block;
+  /* Garante que a imagem seja exibida como um bloco */
+  margin: 0 auto;
+  /* Centraliza a imagem horizontalmente */
 }
 
 .intro-text h1 {
-  font-size: 3.5rem; /* Tamanho grande para destaque */
-  font-weight: 900; /* Extra negrito */
-  color: #4417a6; /* Cor branca, ou outra que você preferir */
-  text-transform: uppercase; /* Todas as letras maiúsculas */
-  line-height: 1.1; /* Espaçamento entre as linhas */
+  font-size: 3.5rem;
+  /* Tamanho grande para destaque */
+  font-weight: 900;
+  /* Extra negrito */
+  color: #4417a6;
+  /* Cor branca, ou outra que você preferir */
+  text-transform: uppercase;
+  /* Todas as letras maiúsculas */
+  line-height: 1.1;
+  /* Espaçamento entre as linhas */
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra leve para destacar no fundo */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  /* Sombra leve para destacar no fundo */
+
 }
 
 .intro-text h2 {
-  font-weight: 700; /* Negrito */
+  font-weight: 300;
+  /* Negrito */
   color: #c088ed;
   margin-bottom: 2rem;
-  /* Se houver mais estilos específicos, você pode adicionar aqui */
+  text-align: justify;
+  /* Justifica o texto do <h2> */
+  text-justify: inter-word;
+  /* Melhora a justificação para evitar espaçamento irregular entre palavras */
+  max-width: 600px;
+  /* Limita a largura do texto para uma leitura confortável */
+
 }
 
 .intro-btn {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   padding: 1rem 2rem;
-  background-color: #c088ed; /* Cor de fundo do botão */
+  background-color: #c088ed;
+  /* Cor de fundo do botão */
   color: white;
   text-decoration: none;
   border-radius: 20px;
   font-weight: bold;
   transition: background-color 0.3s ease;
+  font-weight: 400;
 }
 
 .whatsapp-icon {
-  margin-right: 10px; /* Espaço entre o ícone e o texto */
-  width: 24px; /* Tamanho do ícone */
+  margin-right: 10px;
+  /* Espaço entre o ícone e o texto */
+  width: 24px;
+  /* Tamanho do ícone */
   height: auto;
 }
 
 .intro-btn:hover {
-  background-color: #4417a6; /* Cor de gradiente escuro para hover */
+  background-color: #4417a6;
+  /* Cor de gradiente escuro para hover */
 }
 
 .intro-image {
-  margin-left: auto; /* Empurra para a direita */
-  position: relative; /* Estabelece um contexto de posicionamento */
+  margin-left: auto;
+  /* Empurra para a direita */
+  position: relative;
+  /* Estabelece um contexto de posicionamento */
   max-width: 500px;
 }
 
 .intro-text,
 .intro-image {
-  max-width: 500px; /* Define uma largura máxima para o texto e imagem */
-  margin: auto; /* Centraliza o texto e a imagem dentro da sua largura máxima */
+  max-width: 500px;
+  /* Define uma largura máxima para o texto e imagem */
+  margin: auto;
+  /* Centraliza o texto e a imagem dentro da sua largura máxima */
 }
 
 .intro-image .student-img {
   width: 100%;
-  max-width: 500px; /* Ajuste o tamanho conforme necessário */
-  position: relative; /* Garanta que a imagem da pessoa esteja por cima do fundo */
-  z-index: 1; /* Menor do que o z-index do menu ativo */
+  max-width: 500px;
+  /* Ajuste o tamanho conforme necessário */
+  position: relative;
+  /* Garanta que a imagem da pessoa esteja por cima do fundo */
+  z-index: 1;
+  /* Menor do que o z-index do menu ativo */
 }
 
 .intro-image .background-dec {
   position: absolute;
   top: 0;
-  left: 50%; /* ou ajuste conforme necessário para alinhar como no design */
-  transform: translateX(-50%); /* ajusta o posicionamento horizontal */
-  z-index: 0; /* Por trás da imagem da pessoa */
+  left: 50%;
+  /* ou ajuste conforme necessário para alinhar como no design */
+  transform: translateX(-50%);
+  /* ajusta o posicionamento horizontal */
+  z-index: 0;
+  /* Por trás da imagem da pessoa */
   width: 100%;
-  max-width: 600px; /* Ajuste o tamanho conforme necessário */
+  max-width: 600px;
+  animation: rotate 20s linear infinite;
+
 }
 
-.navbar.active + .intro .intro-image .student-img,
-.navbar.active + .intro .intro-image .background-dec {
-  z-index: -1; /* Isso coloca as imagens atrás do menu quando ativo */
+.navbar.active+.intro .intro-image .student-img,
+.navbar.active+.intro .intro-image .background-dec {
+  z-index: -1;
+
+  /* Isso coloca as imagens atrás do menu quando ativo */
 }
 
 /* Estilos da Seção de Serviços */
 
 .services-section {
+
   position: relative;
   overflow: hidden;
   display: flex;
@@ -170,7 +250,10 @@ body {
   /* background: linear-gradient(to bottom, #ffffff 0%, #ffffff 80%, #C088ED 100%); */
   color: #fff;
   background: none;
-  min-height: 100vh; /* Garante que a seção seja no mínimo do tamanho da tela */
+  min-height: 100vh;
+  /* Garante que a seção seja no mínimo do tamanho da tela */
+  animation: slideUpFadeIn 1.5s ease-out forwards;
+
 }
 
 .services-background {
@@ -179,22 +262,46 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: -1; /* Coloca a imagem de fundo atrás do conteúdo da seção */
+  z-index: -1;
+  /* Coloca a imagem de fundo atrás do conteúdo da seção */
 }
+
 .services-background .background-img {
-  width: 100%; /* Ajusta a largura da imagem para cobrir o elemento */
-  height: auto; /* Mantém a proporção da imagem */
-  object-fit: cover; /* Garante que a imagem cubra toda a área disponível sem distorções */
+  width: 100%;
+  /* Ajusta a largura da imagem para cobrir o elemento */
+  height: auto;
+  /* Mantém a proporção da imagem */
+  object-fit: cover;
+  /* Garante que a imagem cubra toda a área disponível sem distorções */
 }
 
 .background-img {
   position: absolute;
-  bottom: 0; /* Ajuste conforme a necessidade para alinhar a imagem */
-  left: 0; /* Ajuste conforme a necessidade para alinhar a imagem */
-  width: auto; /* Mantém a proporção original da imagem */
-  max-height: 100%; /* Limita a altura da imagem para se ajustar à seção */
-  z-index: -2; /* Garante que a imagem fique atrás de todos os conteúdos */
+  bottom: 0;
+  /* Ajuste conforme a necessidade para alinhar a imagem */
+  left: 0;
+  /* Ajuste conforme a necessidade para alinhar a imagem */
+  width: auto;
+  /* Mantém a proporção original da imagem */
+  max-height: 100%;
+  /* Limita a altura da imagem para se ajustar à seção */
+  z-index: -2;
+  /* Garante que a imagem fique atrás de todos os conteúdos */
 }
+
+/* Estado inicial dos elementos */
+.service-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Classe que será adicionada para disparar a animação */
+.service-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 .services-menu {
   display: flex;
@@ -202,24 +309,36 @@ body {
   flex-wrap: wrap;
   gap: 1rem;
   margin-bottom: 2rem;
+
 }
 
 .services-title {
-  text-align: center; /* Alinha o texto ao centro */
-  margin-bottom: 20px; /* Espaçamento inferior para separar dos botões */
-  color: #4417a6; /* Cor do tema da sua marca */
-  font-size: 2.5rem; /* Tamanho da fonte */
-  font-weight: 900; /* Texto em negrito */
+  text-align: center;
+  /* Alinha o texto ao centro */
+  margin-bottom: 20px;
+  /* Espaçamento inferior para separar dos botões */
+  color: #4417a6;
+  /* Cor do tema da sua marca */
+  font-size: 2.5rem;
+  /* Tamanho da fonte */
+  font-weight: 900;
+  /* Texto em negrito */
   text-transform: uppercase;
   line-height: 1.1;
   margin-bottom: 1rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+  animation-delay: 0.5s;
+  /* Atrasa o início da animação */
+
 }
 
 .service-btn {
   padding: 10px 15px;
-  border: 2px solid #c088ed; /* Alterando a cor da borda para contraste com o fundo */
-  background-color: transparent; /* Fundo transparente para começar */
+  border: 2px solid #c088ed;
+  /* Alterando a cor da borda para contraste com o fundo */
+  background-color: transparent;
+  /* Fundo transparente para começar */
   color: #4417a6;
   font-weight: bold;
   text-transform: uppercase;
@@ -227,7 +346,11 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: all 0.3s ease;
-  margin: 0; /* Remover margem para usar o gap do flexbox */
+  margin: 0;
+  font-weight: 700;
+  animation-delay: 0.75s;
+  /* Atrasos diferentes podem criar um efeito de cascata */
+
 }
 
 .service-btn:hover,
@@ -236,28 +359,40 @@ body {
   color: #c088ed;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
+
 .services-content {
   width: 100%;
-  max-width: 800px; /* Ajustar conforme o necessário */
-  height: calc(100% - 50px); /* Subtrai a altura do título da altura total */
-  overflow-y: auto; /* Adiciona rolagem se o conteúdo exceder a altura */
+  max-width: 800px;
+  /* Ajustar conforme o necessário */
+  height: calc(100% - 50px);
+  /* Subtrai a altura do título da altura total */
+  overflow-y: auto;
+  /* Adiciona rolagem se o conteúdo exceder a altura */
 }
 
 .services-content .service-content {
-  display: none; /* Esconde todos os conteúdos inicialmente */
+  display: none;
+  animation-delay: 1s;
+  /* Continua ajustando o atraso conforme necessário */
+
 }
 
 .services-content .service-content.active {
-  display: block; /* Apenas o conteúdo ativo é exibido */
+  display: block;
+  /* Apenas o conteúdo ativo é exibido */
 }
 
 .subtopics-list {
-  list-style: none; /* Remove o estilo de lista padrão */
+  list-style: none;
+  /* Remove o estilo de lista padrão */
   padding: 0;
   margin: 20px 0;
   width: 100%;
-  column-count: 2; /* Divide os itens da lista em 2 colunas */
-  column-gap: 20px; /* Define um espaço entre as colunas */
+  column-count: 2;
+  /* Divide os itens da lista em 2 colunas */
+  column-gap: 20px;
+
+  /* Define um espaço entre as colunas */
 }
 
 .subtopics-list li {
@@ -268,57 +403,75 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   font-weight: bold;
   margin-bottom: 10px;
-  position: relative; /* Para o posicionamento dos tooltips */
+  position: relative;
+  font-weight: 400;
+
+  /* Para o posicionamento dos tooltips */
 }
 
 .tooltip {
   position: absolute;
-  max-width: 310px; /* Define uma largura máxima */
+  max-width: 310px;
+  /* Define uma largura máxima */
 
   background-color: #4417a6;
   color: white;
   border-radius: 5px;
   padding: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  visibility: hidden; /* Escondido por padrão */
+  visibility: hidden;
+  /* Escondido por padrão */
   opacity: 0;
   transition: opacity 0.3s ease;
-  z-index: 1000; /* Garante que fique acima de outros elementos */
+  z-index: 1000;
+  /* Garante que fique acima de outros elementos */
 }
 
 .custom-checkbox {
   display: inline-block;
-  color: #4417a6; /* Cor da caixa de seleção */
-  margin-right: 10px; /* Espaçamento entre a caixa de seleção e o texto */
-  font-size: 1.2em; /* Tamanho do símbolo de verificação */
+  color: #4417a6;
+  /* Cor da caixa de seleção */
+  margin-right: 10px;
+  /* Espaçamento entre a caixa de seleção e o texto */
+  font-size: 1.2em;
+  /* Tamanho do símbolo de verificação */
 }
+
 .about-section {
-  background: #f8f8f8; /* Ou qualquer cor que combine com o seu design */
-  padding: 4rem 0; /* Espaço na parte superior e inferior da seção */
+  background: #f8f8f8;
+  /* Ou qualquer cor que combine com o seu design */
+  padding: 4rem 0;
+  /* Espaço na parte superior e inferior da seção */
   position: relative;
   text-align: center;
-  overflow: hidden; /* Mantém tudo dentro da seção */
+  overflow: hidden;
+  /* Mantém tudo dentro da seção */
 }
 
 .about-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  max-width: 1200px; /* Limita a largura da seção */
+  max-width: 1200px;
+  /* Limita a largura da seção */
   margin: auto;
 }
 
 .about-image-left,
 .about-image-right {
-  flex: 1; /* Distribui o espaço igualmente */
-  max-width: 200px; /* Limita o tamanho das imagens decorativas */
+  flex: 1;
+  /* Distribui o espaço igualmente */
+  max-width: 200px;
+  /* Limita o tamanho das imagens decorativas */
 }
 
 .decorative-img {
   width: 100%;
   height: auto;
-  border-radius: 50%; /* Torna as imagens circulares */
-  border: 4px solid #c088ed; /* Adiciona uma borda colorida */
+  border-radius: 50%;
+  /* Torna as imagens circulares */
+  border: 4px solid #c088ed;
+  /* Adiciona uma borda colorida */
 }
 
 .team-card {
@@ -328,13 +481,16 @@ body {
   margin: 20px;
   font-family: Arial, sans-serif;
 }
+
 .card-quote {
   position: absolute;
   top: 0;
   right: 0;
-  width: 50px; /* ou o tamanho que você deseja para sua imagem */
+  width: 50px;
+  /* ou o tamanho que você deseja para sua imagem */
   height: auto;
-  z-index: 2; /* Certifique-se de que está acima dos outros elementos do cartão */
+  z-index: 2;
+  /* Certifique-se de que está acima dos outros elementos do cartão */
 }
 
 .card-quote img {
@@ -345,50 +501,66 @@ body {
 .card-image {
   position: relative;
   width: 100%;
-  padding-top: 100%; /* Mantém a proporção de 1:1 */
+  padding-top: 100%;
+  /* Mantém a proporção de 1:1 */
   border-radius: 50%;
   overflow: hidden;
-  background: #ffd700; /* Cor de fundo temporária */
+  background: #ffd700;
+  /* Cor de fundo temporária */
   margin-bottom: 1rem;
 }
+
 .social-icons {
-  margin-bottom: 1rem; /* Espaço abaixo dos ícones de redes sociais */
+  margin-bottom: 1rem;
+  /* Espaço abaixo dos ícones de redes sociais */
   display: flex;
-  justify-content: center; /* Centraliza os ícones de redes sociais */
-  gap: 0.5rem; /* Espaço entre os ícones */
+  justify-content: center;
+  /* Centraliza os ícones de redes sociais */
+  gap: 0.5rem;
+  /* Espaço entre os ícones */
 }
 
 .social-icons a {
   display: inline-block;
-  width: 24px; /* Tamanho dos ícones */
-  height: 24px; /* Tamanho dos ícones */
-  transition: transform 0.3s ease, color 0.3s ease; /* Suaviza a transição do efeito */
+  width: 24px;
+  /* Tamanho dos ícones */
+  height: 24px;
+  /* Tamanho dos ícones */
+  transition: transform 0.3s ease, color 0.3s ease;
+  /* Suaviza a transição do efeito */
 }
 
 .social-icons img {
   width: 100%;
   height: auto;
-  transition: transform 0.3s ease; /* Suaviza a transição do efeito de escala */
+  transition: transform 0.3s ease;
+  /* Suaviza a transição do efeito de escala */
 }
 
 .social-icons a:hover img {
-  transform: scale(1.1); /* Aumenta o tamanho do ícone em 10% */
+  transform: scale(1.1);
+  /* Aumenta o tamanho do ícone em 10% */
 }
 
 .social-icons a.facebook-icon:hover {
-  background-color: #3b5998; /* Cor do Facebook */
-  border-radius: 50%; /* Adiciona bordas arredondadas */
+  background-color: #3b5998;
+  /* Cor do Facebook */
+  border-radius: 50%;
+  /* Adiciona bordas arredondadas */
 }
 
 .social-icons a.instagram-icon:hover {
-  background-color: #e1306c; /* Cor do Instagram */
+  background-color: #e1306c;
+  /* Cor do Instagram */
   border-radius: 50%;
 }
 
 .social-icons a.linkedin-icon:hover {
-  background-color: #0077b5; /* Cor do LinkedIn */
+  background-color: #0077b5;
+  /* Cor do LinkedIn */
   border-radius: 50%;
 }
+
 .card-image img {
   position: absolute;
   top: 50%;
@@ -401,7 +573,8 @@ body {
 
 .card-info {
   position: relative;
-  background: #c088ed; /* Cor de fundo do texto */
+  background: #c088ed;
+  /* Cor de fundo do texto */
   color: white;
   padding: 1rem;
   border-radius: 20px;
@@ -412,7 +585,8 @@ body {
   top: -20px;
   left: 50%;
   transform: translateX(-50%);
-  background: #feb2b2; /* Cor de fundo dos ícones das redes sociais */
+  background: #feb2b2;
+  /* Cor de fundo dos ícones das redes sociais */
   padding: 0.5rem 1rem;
   border-radius: 20px;
 }
@@ -438,95 +612,203 @@ body {
 
 @media (max-width: 768px) {
   .navbar {
-    position: relative; /* Isso permanece inalterado */
-    z-index: 10; /* Garante que a navbar fique por cima do conteúdo quando o menu estiver ativo */
-    height: 60px; /* Definir uma altura fixa para a barra de navegação */
+    position: relative;
+    /* Isso permanece inalterado */
+    z-index: 10;
+    /* Garante que a navbar fique por cima do conteúdo quando o menu estiver ativo */
+    height: 60px;
+    /* Definir uma altura fixa para a barra de navegação */
   }
 
   .hamburger {
     display: block;
     position: absolute;
-    top: 50%; /* Começa a partir do meio da altura da navbar */
+    top: 50%;
+    /* Começa a partir do meio da altura da navbar */
     right: 1rem;
-    transform: translateY(
-      -50%
-    ); /* Desloca o ícone para cima pela metade de sua própria altura */
-    z-index: 3; /* Garante que o ícone fique acima do menu expandido */
+    transform: translateY(-50%);
+    /* Desloca o ícone para cima pela metade de sua própria altura */
+    z-index: 3;
+    /* Garante que o ícone fique acima do menu expandido */
   }
 
   .navbar nav {
     display: none;
     position: fixed;
-    top: 56px; /* Isso deve ser igual à altura da sua navbar */
+    top: 56px;
+    /* Isso deve ser igual à altura da sua navbar */
     left: 0;
-    height: calc(
-      100vh - 56px
-    ); /* Subtrai a altura da navbar do tamanho total da tela */
+    height: calc(100vh - 56px);
+    /* Subtrai a altura da navbar do tamanho total da tela */
     width: 100%;
-    background-color: #cda2f0; /* Fundo agora transparente */
+    background-color: #cda2f0;
+    /* Fundo agora transparente */
     flex-direction: column;
-    justify-content: flex-start; /* Alinhamento vertical do início */
+    justify-content: flex-start;
+    /* Alinhamento vertical do início */
     align-items: center;
     transition: transform 0.3s ease-in-out;
     transform: translateX(-100%);
-    z-index: 11; /* Garante que o menu fique por cima de todos os outros conteúdos */
-    overflow-y: auto; /* Adiciona rolagem se o conteúdo exceder a altura da tela */
+    z-index: 11;
+    /* Garante que o menu fique por cima de todos os outros conteúdos */
+    overflow-y: auto;
+    /* Adiciona rolagem se o conteúdo exceder a altura da tela */
   }
 
   .navbar nav a {
     display: block;
     margin: 10px 0;
     font-size: 1.5rem;
-    border-bottom: 1px solid #4417a6; /* Linha abaixo de cada menu */
-    padding-bottom: 0.5rem; /* Espaço abaixo do texto antes da linha */
+    border-bottom: 1px solid #4417a6;
+    /* Linha abaixo de cada menu */
+    padding-bottom: 0.5rem;
+    /* Espaço abaixo do texto antes da linha */
   }
 
   .navbar #navbarNav.active {
-    display: flex; /* Vai mostrar a nav se tem a classe .active */
+    display: flex;
+    /* Vai mostrar a nav se tem a classe .active */
     transform: translateX(0);
   }
+
   .navbar nav a:last-child {
     border-bottom: none;
   }
+
   .intro {
     flex-direction: column;
-    padding: 4rem 5%; /* Reduz o padding lateral para dispositivos móveis */
+    padding: 4rem 5%;
+    /* Reduz o padding lateral para dispositivos móveis */
   }
+
+  .intro-image {
+    display: none;
+  }
+
+  .intro-text h1 {
+    margin: 0 auto 20px;
+    /* Centraliza o <h1> e adiciona margem abaixo */
+  }
+
+  .intro-text h1 img {
+    width: 80%;
+    /* Reduz a largura da imagem para se ajustar à tela */
+    max-width: 300px;
+    /* Define uma largura máxima para a imagem do logo */
+    height: auto;
+    /* Mantém a proporção da imagem */
+  }
+
+  .intro-text h2 {
+    padding: 0 15px;
+    /* Adiciona padding para evitar que o texto toque nas bordas */
+    text-align: justify;
+    /* Justifica o texto para melhorar a legibilidade */
+    max-width: 100%;
+    /* Permite que o texto expanda até as bordas do padding */
+    margin-bottom: 20px;
+    /* Adiciona espaço abaixo do <h2> */
+  }
+
+  .intro-btn {
+    font-size: 14px;
+    /* Pode precisar ajustar o tamanho da fonte do botão */
+    padding: 10px 20px;
+    /* Ajusta o padding do botão */
+    margin: 0 auto;
+    /* Centraliza o botão */
+    display: block;
+    /* Exibe o botão como bloco */
+  }
+
+  .whatsapp-icon {
+    width: 20px;
+    /* Ajusta o tamanho do ícone do WhatsApp */
+    height: auto;
+    /* Mantém a proporção */
+  }
+
+  .intro .background-dec {
+    display: none;
+    /* Oculta o elemento decorativo em telas menores, se necessário */
+  }
+
 
   .intro-text,
   .intro-image {
-    max-width: 100%; /* Permite que o texto e a imagem usem toda a largura disponível */
-    margin: auto; /* Centraliza o texto e a imagem */
+    max-width: 100%;
+    /* Permite que o texto e a imagem usem toda a largura disponível */
+    margin: auto;
+    /* Centraliza o texto e a imagem */
   }
+
   .intro-image .background-dec {
-    display: none; /* Opcionalmente esconde o fundo decorativo em telas menores */
+    display: none;
+
+    /* Opcionalmente esconde o fundo decorativo em telas menores */
   }
+
   .services-menu {
     flex-direction: column;
   }
+
   .about-wrapper {
     flex-direction: column;
   }
 
   .about-image-left,
   .about-image-right {
-    max-width: 150px; /* Reduz o tamanho das imagens em telas menores */
-    margin-bottom: 1rem; /* Espaçamento entre as imagens e o conteúdo */
+    max-width: 150px;
+    /* Reduz o tamanho das imagens em telas menores */
+    margin-bottom: 1rem;
+    /* Espaçamento entre as imagens e o conteúdo */
   }
 
   .about-content {
-    padding: 0; /* Remove o espaçamento lateral para telas menores */
+    padding: 0;
+    /* Remove o espaçamento lateral para telas menores */
   }
 
   .subtopics-list {
-    column-count: 1; /* Em telas pequenas, mostra todos os itens em uma única coluna */
+    column-count: 1;
+    /* Em telas pequenas, mostra todos os itens em uma única coluna */
     column-gap: 20px;
   }
 
   .subtopics-list li {
-    display: block; /* Garante que os itens sejam exibidos em blocos, um abaixo do outro */
-    break-inside: avoid; /* Evita que os itens sejam divididos entre colunas ou páginas */
+    display: block;
+    /* Garante que os itens sejam exibidos em blocos, um abaixo do outro */
+    break-inside: avoid;
+    /* Evita que os itens sejam divididos entre colunas ou páginas */
   }
 }
 
-/* ... estilos subsequentes ... */
+@keyframes rotate {
+  100% {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUpFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
