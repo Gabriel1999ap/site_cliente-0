@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
       // Remove a classe 'active' de todos os botões e conteúdos
       document.querySelectorAll('.service-btn').forEach(button => button.classList.remove('active'));
       document.querySelectorAll('.service-content').forEach(content => content.classList.remove('active'));
-      
+
       // Adiciona a classe 'active' ao botão clicado e ao conteúdo relacionado
       this.classList.add('active');
       const contentToShow = document.getElementById(this.getAttribute('data-service'));

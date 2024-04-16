@@ -70,19 +70,18 @@ body {
 .intro {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  /* Distribui o espaço de maneira uniforme */
-  padding: 4rem 10%;
-  /* Aumenta o padding para adicionar uma 'margem' em ambos os lados */
+  justify-content: center;
+  /* Centraliza o conteúdo horizontalmente e verticalmente */
+  padding: 4rem 5%;
+  /* Adiciona padding responsivo */
   background: #fdf6fe;
   color: #4417a6;
-  /* Cor do tema da sua marca */
   position: relative;
-  /* Para posicionamento absoluto dos elementos filhos */
-  height: 100vh;
-  /* Preenche toda a tela de visualização */
+  min-height: 100vh;
+  /* Assegura que ocupa, no mínimo, toda a altura da tela */
+  height: auto;
+  /* Permite que a altura se ajuste ao conteúdo */
   overflow: hidden;
-  /* Oculta qualquer conteúdo que exceda os limites da caixa */
 }
 
 .intro::after {
@@ -116,7 +115,7 @@ body {
 }
 
 .intro-logo {
-  width: 100%;
+  width: 90%;
   /* Ajuste a largura conforme necessário */
   max-width: 100%;
   /* Garante que a imagem não exceda a largura do container */
@@ -147,16 +146,18 @@ body {
 }
 
 .intro-text h2 {
-  font-weight: 300;
+  font-weight: 500;
+  font-size: 25px;
   /* Negrito */
-  color: #c088ed;
+  color: #4417a6;
   margin-bottom: 2rem;
   text-align: justify;
   /* Justifica o texto do <h2> */
   text-justify: inter-word;
   /* Melhora a justificação para evitar espaçamento irregular entre palavras */
   max-width: 600px;
-  /* Limita a largura do texto para uma leitura confortável */
+  text-shadow: 1px 1px 4px #d2bcf1;
+
 
 }
 
@@ -438,7 +439,7 @@ body {
 }
 
 .about-section {
-  background: #f8f8f8;
+  background: #fdf6fe;
   /* Ou qualquer cor que combine com o seu design */
   padding: 4rem 0;
   /* Espaço na parte superior e inferior da seção */
@@ -487,10 +488,9 @@ body {
   top: 0;
   right: 0;
   width: 50px;
-  /* ou o tamanho que você deseja para sua imagem */
   height: auto;
   z-index: 2;
-  /* Certifique-se de que está acima dos outros elementos do cartão */
+
 }
 
 .card-quote img {
@@ -502,32 +502,30 @@ body {
   position: relative;
   width: 100%;
   padding-top: 100%;
-  /* Mantém a proporção de 1:1 */
   border-radius: 50%;
   overflow: hidden;
-  background: #ffd700;
-  /* Cor de fundo temporária */
   margin-bottom: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.card-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
 }
 
 .social-icons {
   margin-bottom: 1rem;
-  /* Espaço abaixo dos ícones de redes sociais */
   display: flex;
   justify-content: center;
-  /* Centraliza os ícones de redes sociais */
   gap: 0.5rem;
-  /* Espaço entre os ícones */
 }
 
 .social-icons a {
   display: inline-block;
   width: 24px;
-  /* Tamanho dos ícones */
   height: 24px;
-  /* Tamanho dos ícones */
   transition: transform 0.3s ease, color 0.3s ease;
-  /* Suaviza a transição do efeito */
 }
 
 .social-icons img {
@@ -606,73 +604,161 @@ body {
   font-size: 0.9rem;
 }
 
-/* Estilos para responsividade e ajuste fino podem ser adicionados abaixo */
+.clients-section {
+  text-align: center;
+  padding: 50px 20px;
+  /* Espaço vertical e horizontal */
+  background-color: #f8f8f8;
+  /* Cor de fundo */
+}
 
-/* ... estilos anteriores ... */
+.client-logos {
+  display: flex;
+  justify-content: center;
+  /* Centraliza os logos */
+  align-items: center;
+  overflow-x: auto;
+  /* Ativa a rolagem horizontal */
+  scroll-snap-type: x mandatory;
+  /* Snapping para uma experiência suave de slider */
+  -ms-overflow-style: none;
+  /* Remove a barra de rolagem no IE e Edge */
+  scrollbar-width: none;
+  /* Remove a barra de rolagem no Firefox */
+}
+
+.client-logos::-webkit-scrollbar {
+  display: none;
+  /* Remove a barra de rolagem em navegadores WebKit como Chrome e Safari */
+}
+
+.clientLogo {
+  flex: 0 0 auto;
+  width: 200px;
+  height: auto;
+  margin: 0 20px;
+  cursor: pointer;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+  scroll-snap-align: center;
+  padding: 20px 0;
+
+
+}
+
+.clientLogo:hover {
+  filter: none;
+}
+
+.footer-section {
+  background: linear-gradient(to right, #dec9f7, #4417a6);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.footer-logo {
+  max-width: 150px;
+  /* Ajuste conforme a dimensão desejada */
+  margin-bottom: 20px;
+}
+
+.footer-icons a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.footer-icons img {
+  width: 40px;
+  /* Ajuste conforme necessário */
+  transition: transform 0.3s ease;
+}
+
+.footer-icons a:hover img {
+  transform: scale(1.1);
+  /* Efeito de zoom ao passar o mouse */
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+
+
+
 
 @media (max-width: 768px) {
   .navbar {
+    padding: 4rem 2%;
     position: relative;
-    /* Isso permanece inalterado */
     z-index: 10;
-    /* Garante que a navbar fique por cima do conteúdo quando o menu estiver ativo */
     height: 60px;
-    /* Definir uma altura fixa para a barra de navegação */
   }
 
   .hamburger {
     display: block;
     position: absolute;
     top: 50%;
-    /* Começa a partir do meio da altura da navbar */
     right: 1rem;
     transform: translateY(-50%);
-    /* Desloca o ícone para cima pela metade de sua própria altura */
     z-index: 3;
-    /* Garante que o ícone fique acima do menu expandido */
+
   }
 
   .navbar nav {
     display: none;
-    position: fixed;
-    top: 56px;
-    /* Isso deve ser igual à altura da sua navbar */
-    left: 0;
-    height: calc(100vh - 56px);
-    /* Subtrai a altura da navbar do tamanho total da tela */
-    width: 100%;
+    position: absolute;
     background-color: #cda2f0;
-    /* Fundo agora transparente */
-    flex-direction: column;
-    justify-content: flex-start;
-    /* Alinhamento vertical do início */
-    align-items: center;
-    transition: transform 0.3s ease-in-out;
+    /* Ajustar cor de fundo conforme necessário */
+    top: 100%;
+    /* Posiciona o menu logo abaixo da navbar */
+    left: 0;
+    width: 100%;
+    /* Ajustar conforme a largura desejada */
     transform: translateX(-100%);
-    z-index: 11;
-    /* Garante que o menu fique por cima de todos os outros conteúdos */
-    overflow-y: auto;
-    /* Adiciona rolagem se o conteúdo exceder a altura da tela */
+    transition: transform 0.3s ease-in-out;
+    z-index: 10;
+    /* Garantir que está acima de outros conteúdos mas abaixo da navbar fixa */
+    flex-direction: column;
+    /* Organiza os itens em coluna */
   }
 
   .navbar nav a {
     display: block;
-    margin: 10px 0;
-    font-size: 1.5rem;
-    border-bottom: 1px solid #4417a6;
-    /* Linha abaixo de cada menu */
-    padding-bottom: 0.5rem;
-    /* Espaço abaixo do texto antes da linha */
+    /* Faz cada link aparecer em uma nova linha */
+    width: 100%;
+    /* Ocupa toda a largura do menu */
+    text-align: center;
+    /* Centraliza o texto dos links */
+    padding: 15px;
+    /* Adiciona um espaçamento confortável */
+    border-bottom: 1px solid #ffffff;
+    /* Uma linha sutil entre os itens */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Transições suaves */
   }
 
   .navbar #navbarNav.active {
     display: flex;
-    /* Vai mostrar a nav se tem a classe .active */
     transform: translateX(0);
   }
 
   .navbar nav a:last-child {
     border-bottom: none;
+  }
+
+  .navbar nav a:hover {
+    background-color: #b291cf;
+    /* Muda a cor de fundo ao passar o mouse */
+    color: #ffffff;
+    /* Muda a cor do texto ao passar o mouse */
   }
 
   .intro {
@@ -780,6 +866,25 @@ body {
     /* Garante que os itens sejam exibidos em blocos, um abaixo do outro */
     break-inside: avoid;
     /* Evita que os itens sejam divididos entre colunas ou páginas */
+  }
+
+  .client-logos {
+    justify-content: start;
+    /* Alinha os logos ao início do contêiner em telas maiores */
+  }
+
+  .client-logos {
+    flex-direction: column;
+    /* Altera a direção do flex para coluna */
+    overflow-x: hidden;
+    /* Desativa a rolagem horizontal */
+    overflow-y: auto;
+    /* Ativa a rolagem vertical se necessário */
+  }
+
+  .clientLogo {
+    margin: 20px auto;
+    /* Aumenta a margem vertical e centraliza horizontalmente */
   }
 }
 
