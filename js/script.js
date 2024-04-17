@@ -79,3 +79,48 @@ document.addEventListener('DOMContentLoaded', () => {
   animatableServices.forEach(el => observer.observe(el));
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('service-visible');
+      } else {
+        entry.target.classList.remove('service-visible');
+      }
+    });
+  }, {
+    rootMargin: '0px',
+    threshold: 0.1 // Ajuste conforme necessário para disparar a animação mais cedo ou mais tarde
+  });
+
+  // Seleciona os elementos que devem ser animados na seção "Nosso Time"
+  const aboutAnimateItems = document.querySelectorAll('.about-section .service-animate');
+  aboutAnimateItems.forEach(item => observer.observe(item));
+
+  // Seleciona os elementos que devem ser animados na seção "Clientes"
+  const clientLogos = document.querySelectorAll('.clients-section .client-logos img');
+  clientLogos.forEach(logo => observer.observe(logo));
+});
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  const backToTopButton = document.getElementById('back-to-top');
+
+  // Quando rolar a página, mostrar/esconder o botão
+  window.onscroll = function() {
+    scrollFunction();
+  };
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      backToTopButton.style.display = "block";
+    } else {
+      backToTopButton.style.display = "none";
+    }
+  }
+
+  // Quando clicar no botão, rolar para o topo
+  backToTopButton.onclick = function() {
+    document.body.scrollTop = 0; // Para Safari
+    document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE e Opera
+  };
+});

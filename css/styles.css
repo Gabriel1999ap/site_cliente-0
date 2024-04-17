@@ -7,11 +7,37 @@
   box-sizing: border-box;
 }
 
+
 body {
   font-family: 'Mitr', sans-serif;
-  /* Define a fonte padrão para o corpo do documento */
-  /* Escolha a fonte que preferir */
 }
+
+/* Estiliza a barra de rolagem globalmente */
+::-webkit-scrollbar {
+  width: 12px;
+  /* Largura da barra de rolagem */
+}
+
+/* Fundo da barra de rolagem */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  /* Cor de fundo da trilha */
+}
+
+/* Botão da barra de rolagem (handle) */
+::-webkit-scrollbar-thumb {
+  background: #dec9f7;
+  /* Cor do botão de rolagem */
+  border-radius: 6px;
+  /* Bordas arredondadas para o botão de rolagem */
+}
+
+/* Botão da barra de rolagem ao passar o mouse */
+::-webkit-scrollbar-thumb:hover {
+  background: #4417a6;
+  /* Cor do botão de rolagem ao passar o mouse */
+}
+
 
 /* Estilo da Navbar */
 .navbar {
@@ -690,6 +716,32 @@ p {
   margin-bottom: 20px;
 }
 
+/* Estilo do botão Voltar ao Topo */
+#back-to-top {
+  position: fixed;
+  /* Fixo na tela */
+  bottom: 20px;
+  /* 20px do fundo */
+  right: 20px;
+  /* 20px da direita */
+  background-color: #dec9f7;
+  /* Cor de fundo */
+  color: #4417a6;
+  /* Cor da seta */
+  font-size: 24px;
+
+  /* Tamanho da fonte */
+  border: none;
+  /* Sem borda */
+  border-radius: 5px;
+  /* Cantos arredondados */
+  padding: 10px 15px;
+  /* Padding */
+  cursor: pointer;
+  /* Muda o cursor para indicar que é clicável */
+  z-index: 1000;
+  /* Garante que ficará acima de outros elementos */
+}
 
 
 
@@ -916,4 +968,42 @@ p {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.about-section .service-animate,
+.clients-section .service-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.about-section .service-visible,
+.clients-section .service-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Define o estado inicial da animação para elementos dentro da seção about */
+.about-section .team-card,
+.clients-section .client-logos img {
+  opacity: 0;
+  transform: translateX(-100px);
+}
+
+/* Define a animação ativa quando a classe é adicionada */
+.about-section .team-card.service-visible,
+.clients-section .client-logos img.service-visible {
+  animation: slideFromLeft 0.5s forwards ease-out;
 }
