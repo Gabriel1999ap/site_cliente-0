@@ -479,7 +479,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  max-width: 1200px;
+  max-width: 1550px;
   /* Limita a largura da seção */
   margin: auto;
 }
