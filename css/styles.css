@@ -173,7 +173,7 @@ body {
 
 .intro-text h2 {
   font-weight: 500;
-  font-size: 25px;
+  /* font-size: 25px; */
   /* Negrito */
   color: #4417a6;
   margin-bottom: 2rem;
